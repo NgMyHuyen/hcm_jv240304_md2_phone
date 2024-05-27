@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Suggest from "./SuggestForUser";
 // import MainAdmin from "./forAdmin/MainPageAdmin";
-// import Login from "./forUser/Login";
-// import SignUp from "./forUser/SignUp";
+// import Login from "./User/Login";
+// import SignUp from "./User/SignUp";
 // import Detail from "./forUser/ProductDetail";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     <>
       <div>
         <Header />
-        {/* <DarkVariantExample />*/}
+        {/* <DarkVariantExample /> */}
         <Suggest />
         <Footer />
         {/* <MainAdmin /> */}
