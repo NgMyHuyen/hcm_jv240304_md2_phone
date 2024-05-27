@@ -5,7 +5,7 @@ import Footer from "./Footer";
 // import DarkVariantExample from "./Carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import MainContent from "./MainContent";
+import Suggest from "./SuggestForUser";
 // import MainAdmin from "./forAdmin/MainPageAdmin";
 // import Login from "./forUser/Login";
 // import SignUp from "./forUser/SignUp";
@@ -19,7 +19,7 @@ function App() {
       <div>
         <Header />
         {/* <DarkVariantExample />*/}
-        {/* <MainContent /> */}
+        <Suggest />
         <Footer />
         {/* <MainAdmin /> */}
         {/* <Login /> */}
