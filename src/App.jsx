@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Header from "./Header";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 // import DarkVariantExample from "./Carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,9 +18,9 @@ function App() {
     <>
       <div>
         <Header />
-        {/* <DarkVariantExample />
-        <MainContent />
-        <Footer /> */}
+        {/* <DarkVariantExample />*/}
+        {/* <MainContent /> */}
+        <Footer />
         {/* <MainAdmin /> */}
         {/* <Login /> */}
         {/* <SignUp /> */}
