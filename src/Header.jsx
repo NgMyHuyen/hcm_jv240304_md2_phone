@@ -16,7 +16,9 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+              {/* <Nav.Link href="#Outstanding">Nổi Bật</Nav.Link> */}
               <Nav.Link href="#Outstanding">Nổi Bật</Nav.Link>
+
               <NavDropdown title="Smartphone" id="Smartphone-dropdown">
                 <NavDropdown.Item href="#Samsung">Samsung</NavDropdown.Item>
                 <NavDropdown.Item href="#Iphone">iPhone</NavDropdown.Item>
@@ -32,7 +34,19 @@ function Header() {
             </Nav>
           </Navbar.Collapse>
           <div className="group-icon">
-            <PersonIcon />
+            {/* <PersonIcon /> */}
+            <NavDropdown
+              title={<PersonIcon />}
+              id="person-icon-dropdown"
+              align="end"
+            >
+              <NavDropdown.Item>
+                <a href="#Admin">Admin</a>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <a href="#User">User</a>
+              </NavDropdown.Item>
+            </NavDropdown>
             <ShoppingCartIcon />
             <LogoutIcon />
           </div>
