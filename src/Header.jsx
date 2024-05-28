@@ -40,12 +40,15 @@ function Header() {
               id="person-icon-dropdown"
               align="end"
             >
-              <NavDropdown.Item>
+              {/* <NavDropdown.Item>
                 <a href="#Admin">Admin</a>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <a href="#User">User</a>
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
+              <NavDropdown.Item href="#Admin">Admin</NavDropdown.Item>
+              <NavDropdown.Item href="#Login">User</NavDropdown.Item>
+
+              {/* <NavDropdown.Item>
+                <a href="#Login">User</a>
+              </NavDropdown.Item> */}
             </NavDropdown>
             <ShoppingCartIcon />
             <LogoutIcon />

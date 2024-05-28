@@ -16,8 +16,7 @@ function App() {
   return (
     <>
       <Routes>
-        {/* <Route path="/" element={<MainContent />} /> */}
-        <Route path="/" />
+        <Route path="/" element={<Carousel />} />
 
         {/* <Route path="/admin" element={<MainAdmin />} /> */}
         <Route path="/login" element={<Login />} />
