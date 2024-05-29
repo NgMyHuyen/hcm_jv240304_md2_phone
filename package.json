@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
     "api": "^6.1.1",
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "carousel": "^0.0.3",
     "concurrently": "^8.2.2",

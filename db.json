@@ -28,5 +28,21 @@
       "phoneText1": "Phan cung manh me",
       "phoneText2": "Lam tu Titan."
     }
+  ],
+  "userList": [
+    {
+      "id": 1,
+      "userName": "Huyen",
+      "gender": "Nu",
+      "email": "nguyenhasbkjas",
+      "phone": "0987654321"
+    },
+    {
+      "id": 2,
+      "userName": "Tran",
+      "gender": "Nu",
+      "email": "nguyenhasbkjas",
+      "phone": "0987654321"
+    }
   ]
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../organism/Header/Header";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
   const [userName, setUserName] = useState("");
@@ -67,7 +68,7 @@ export default function SignUp() {
             />
           </div>
           <button type="submit" className="sign-up-button">
-            Sign Up
+            <Link to={"/"}>Sign Up</Link>
           </button>
         </form>
       </div>
