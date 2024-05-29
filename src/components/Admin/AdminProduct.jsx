@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import axios from "axios";
-import { margin } from "@mui/system";
-// import serverData from "./mock-api/server.json";
+import React, { useEffect, useState } from "react";
 
 export default function MainAdmin() {
   // const { productList } = serverData;

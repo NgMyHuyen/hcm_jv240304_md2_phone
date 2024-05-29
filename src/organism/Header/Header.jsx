@@ -1,12 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import SearchIcon from "@mui/icons-material/Search";
-import PersonIcon from "@mui/icons-material/Person";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
-
+import PersonIcon from "@mui/icons-material/Person";
+import SearchIcon from "@mui/icons-material/Search";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import React from "react";
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./style.scss";
 
 function Header() {
   return (
@@ -14,17 +13,13 @@ function Header() {
       <div className="header">
         <Navbar bg="light" variant="light" expand="lg">
           <Container>
-            {/* <href> */}
             <Link to={"/"}>
               <h1 className="logo">TINY</h1>
             </Link>
-            {/* </href> */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                {/* <Nav.Link href="#Outstanding">Nổi Bật</Nav.Link> */}
                 <Nav.Link href="#Outstanding">Nổi Bật</Nav.Link>
-
                 <NavDropdown title="Smartphone" id="Smartphone-dropdown">
                   <NavDropdown.Item href="/Samsung">Samsung</NavDropdown.Item>
                   <NavDropdown.Item href="/Iphone">iPhone</NavDropdown.Item>
@@ -40,7 +35,6 @@ function Header() {
               </Nav>
             </Navbar.Collapse>
             <div className="group-icon">
-              {/* <PersonIcon /> */}
               <NavDropdown
                 title={<PersonIcon />}
                 id="person-icon-dropdown"

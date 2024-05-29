@@ -1,11 +1,11 @@
 import React from "react";
-import "./Admin.css";
-import Header from "../Header";
+import "./AdminLogin.scss";
+import { Link } from "react-router-dom";
+import Header from "../../organism/Header/Header";
 
 const LoginAdmin = () => {
   const handleAdminSubmit = (event) => {
     event.preventDefault();
-    // Add your form submit logic here
   };
 
   return (
@@ -13,13 +13,7 @@ const LoginAdmin = () => {
       <Header />
       <div className="page-wrap">
         <div className="left-panel">
-          <div className="illustration">
-            {/* <img
-            src="/images/illustration.png"
-            alt="Illustration"
-            className="image"
-          /> */}
-          </div>
+          <div className="illustration"></div>
           <h2>Welcome back to TINY</h2>
         </div>
 
@@ -48,9 +42,9 @@ const LoginAdmin = () => {
             </div>
 
             <div className="lost-password">
-              <a href="#" className="link">
+              <Link to="/" className="link">
                 Forgot your password?
-              </a>
+              </Link>
             </div>
           </form>
         </div>

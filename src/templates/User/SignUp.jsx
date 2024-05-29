@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../Header";
+import Header from "../../organism/Header/Header";
 
 export default function SignUp() {
   const [userName, setUserName] = useState("");
