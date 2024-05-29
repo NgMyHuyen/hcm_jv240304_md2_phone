@@ -1,7 +1,7 @@
 import React from "react";
 import "./AdminLogin.scss";
 import { Link } from "react-router-dom";
-import Header from "../../organism/Header/Header";
+import Header from "../../../organism/Header/Header";
 
 const AdminLogin = () => {
   const handleAdminSubmit = (event) => {
@@ -37,7 +37,7 @@ const AdminLogin = () => {
 
             <div className="form-group flex-end">
               <button className="button" type="submit">
-                LOGIN
+                <Link to={"/adminweb"}>LOGIN</Link>
               </button>
             </div>
 

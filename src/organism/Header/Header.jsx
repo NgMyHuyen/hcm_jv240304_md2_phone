@@ -41,11 +41,11 @@ function Header() {
                 align="end"
               >
                 <NavDropdown.Item>
-                  <Link to={"/AdminLogin"}>Admin</Link>
+                  <Link to={"/admin-login"}>Admin</Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item>
-                  <Link to={"/Login"}>User</Link>
+                  <Link to={"/login"}>User</Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <ShoppingCartIcon />
