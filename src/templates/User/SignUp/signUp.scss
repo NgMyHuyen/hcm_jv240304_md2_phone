@@ -1,0 +1,60 @@
+// SignUp(User)
+.sign-up-form-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://ceremonycoffee.com/wp-content/uploads/ceremony-order-app-hero-1.jpg");
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  }
+
+  .sign-up-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #04aa6d;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #038c58;
+    }
+  }
+}

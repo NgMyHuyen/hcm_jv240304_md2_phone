@@ -2,8 +2,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import React from "react";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 

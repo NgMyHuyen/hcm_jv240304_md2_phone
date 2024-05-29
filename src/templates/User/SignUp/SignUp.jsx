@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Header from "../../organism/Header/Header";
 import { Link } from "react-router-dom";
+import Header from "../../../organism/Header/Header";
+import "./signUp.scss";
 
 export default function SignUp() {
   const [userName, setUserName] = useState("");
