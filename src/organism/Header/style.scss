@@ -1,0 +1,48 @@
+/*header*/
+.header {
+  position: fixed !important;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  .logo {
+    text-align: center;
+    font-size: 60px;
+    margin-right: 50px;
+    font-weight: bold;
+    background-color: black;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.4) 0px 3px 3px;
+  }
+  form {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 40px;
+    input {
+      border-radius: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 60px;
+      outline: none;
+      border: 1.5px solid black;
+    }
+    #search-icon {
+      margin-left: -35px;
+      margin-top: 5px;
+    }
+  }
+  .group-icon {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+  }
+  #PhonAcc-dropdown {
+    margin-right: 115px;
+    padding-left: 20px;
+  }
+  #Smartphone-dropdown {
+    padding-left: 20px;
+  }
+}
