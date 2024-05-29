@@ -1,22 +1,20 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import SearchIcon from "@mui/icons-material/Search";
-import PersonIcon from "@mui/icons-material/Person";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
-import "./App.scss";
+import PersonIcon from "@mui/icons-material/Person";
+import SearchIcon from "@mui/icons-material/Search";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import React from "react";
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import "../../src/App.scss";
 function Header() {
   return (
     <div className="header">
       <Navbar bg="light" variant="light" expand="lg">
         <Container>
-          {/* <href> */} <h1 className="logo">TINY</h1>
-          {/* </href> */}
+          <h1 className="logo">TINY</h1>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {/* <Nav.Link href="#Outstanding">Nổi Bật</Nav.Link> */}
               <Nav.Link href="#Outstanding">Nổi Bật</Nav.Link>
 
               <NavDropdown title="Smartphone" id="Smartphone-dropdown">
@@ -40,15 +38,8 @@ function Header() {
               id="person-icon-dropdown"
               align="end"
             >
-              {/* <NavDropdown.Item>
-                <a href="#Admin">Admin</a>
-              </NavDropdown.Item> */}
               <NavDropdown.Item href="#Admin">Admin</NavDropdown.Item>
               <NavDropdown.Item href="#Login">User</NavDropdown.Item>
-
-              {/* <NavDropdown.Item>
-                <a href="#Login">User</a>
-              </NavDropdown.Item> */}
             </NavDropdown>
             <ShoppingCartIcon />
             <LogoutIcon />

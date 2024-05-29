@@ -32,6 +32,7 @@ export default function MainAdmin() {
 
           <div className="adminUser-right">
             <h2>Manage Product</h2>
+
             <form className="containerProducts">
               <h3>Product's Information </h3>
               <div className="containerProducts-input">
@@ -87,6 +88,7 @@ export default function MainAdmin() {
               </div>
               <br />
             </form>
+
             <table>
               <tr>
                 <th>Image</th>

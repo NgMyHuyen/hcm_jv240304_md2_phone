@@ -1,24 +1,21 @@
-import React, { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import "./App.scss";
-import Header from "./Header";
-import Footer from "./Footer";
-// import DarkVariantExample from "./Carousel";
-import "slick-carousel/slick/slick.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
-import Suggest from "./SuggestForUser";
-// import MainAdmin from "./forAdmin/MainPageAdmin";
+import "slick-carousel/slick/slick.css";
+import CarouselUser from "./components/CarouselUser";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Suggest from "./components/SuggestForUser";
+import "./App.scss";
 import Login from "./User/Login";
 import SignUp from "./User/SignUp";
-// import Detail from "./forUser/ProductDetail";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Carousel />} />
+        <Route path="/" element={<CarouselUser />} />
 
-        {/* <Route path="/admin" element={<MainAdmin />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
