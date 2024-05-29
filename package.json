@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "concurrently \"npm run dev\" \"json-server -w db.json -p 3000\"",
+    "server": "json-server --watch db.json -m ./node_modules/json-server-auth --port 3000"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -17,6 +19,9 @@
     "api": "^6.1.1",
     "bootstrap": "^5.3.3",
     "carousel": "^0.0.3",
+    "concurrently": "^8.2.2",
+    "json-server": "^1.0.0-beta.0",
+    "json-server-auth": "^2.1.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
