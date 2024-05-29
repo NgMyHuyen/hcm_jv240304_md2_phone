@@ -3,7 +3,7 @@ import "./AdminLogin.scss";
 import { Link } from "react-router-dom";
 import Header from "../../organism/Header/Header";
 
-const LoginAdmin = () => {
+const AdminLogin = () => {
   const handleAdminSubmit = (event) => {
     event.preventDefault();
   };
@@ -53,4 +53,4 @@ const LoginAdmin = () => {
   );
 };
 
-export default LoginAdmin;
+export default AdminLogin;
