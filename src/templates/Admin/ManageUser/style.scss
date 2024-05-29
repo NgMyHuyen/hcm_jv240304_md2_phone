@@ -1,0 +1,55 @@
+.adminUser-right {
+  margin-left: 100px;
+  h2 {
+    background-color: #04aa6d;
+    color: white;
+    text-align: center;
+  }
+  table {
+    caption-side: bottom;
+    border-collapse: collapse;
+    width: 100%;
+    img {
+      width: 50px;
+    }
+    .td-btn {
+      display: flex;
+    }
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12px;
+    margin-right: 10px;
+    .containerProducts-input {
+      display: flex;
+      width: 1035px;
+      align-items: center;
+    }
+    input {
+      width: 250px;
+      height: 30px;
+      border-radius: 10px;
+      border-color: green;
+    }
+    .input-product-infor {
+      padding-top: 15px;
+    }
+    #add {
+      margin-top: 15px;
+      width: 70px;
+      height: 23px;
+      border: 2px solid green;
+      border-radius: 8px;
+      background-color: white;
+    }
+  }
+}

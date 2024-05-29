@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { items } from "../../utils/common";
 import "./style.scss";
+import { Link } from "react-router-dom";
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -60,6 +61,9 @@ const Suggest = () => {
               <a href={item.link} className="btn">
                 Add to Card
               </a>
+              <Link to={"/products-detail"} className="btn">
+                See more
+              </Link>
             </div>
           </div>
         ))}

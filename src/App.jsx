@@ -5,6 +5,10 @@ import Home from "./templates/User/Home";
 import Header from "./organism/Header/Header";
 import SignUp from "./templates/User/SignUp/SignUp";
 import "./App.scss";
+import AdminWeb from "./templates/Admin/AdminWeb/AdminWeb";
+import ManageUser from "./templates/Admin/ManageUser/ManageUser.jsx";
+import ManageProduct from "./templates/Admin/ManageProduct/ManageProduct.jsx";
+import ProductsDetail from "./organism/Detail/ProductsDetail.jsx";
 
 function App() {
   return (
@@ -12,37 +16,18 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/products-detail" element={<ProductsDetail />}></Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        {/* adminLogin -> sua lai: admin-login */}
+
+        <Route path="/adminweb" element={<AdminWeb />}>
+          <Route path="user" element={<ManageUser />}></Route>
+          <Route path="product" element={<ManageProduct />}></Route>
+        </Route>
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-// import React from "react";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Home from "../src/templates/User/Home";
-// import Login from "../src/templates/User/Login";
-// import SignUp from "../src/templates/User/SignUp";
-// import "./App.scss";
-// import AdminLogin from "./templates/Admin/AdminLogin/AdminLogin";
-
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/signup" element={<SignUp />} />
-//         {/* adminLogin -> sua lai: admin-login */}
-//         <Route path="/admin-login" element={<AdminLogin />} />
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
-
-// src/App.jsx
