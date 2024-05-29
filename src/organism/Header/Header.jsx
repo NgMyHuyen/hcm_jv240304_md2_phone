@@ -2,8 +2,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import React from "react";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
@@ -41,11 +41,11 @@ function Header() {
                 align="end"
               >
                 <NavDropdown.Item>
-                  <Link to={"/AdminLogin"}>Admin</Link>
+                  <Link to={"/signup"}>Sign Up</Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item>
-                  <Link to={"/Login"}>User</Link>
+                  <Link to={"/login"}>Login</Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <ShoppingCartIcon />
@@ -59,3 +59,39 @@ function Header() {
 }
 
 export default Header;
+
+// src/organism/Header/Header.jsx
+// import React from "react";
+// import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+// import { Link } from "react-router-dom";
+// import "./style.scss";
+
+// function Header() {
+//   return (
+//     <div className="header">
+//       <Navbar bg="light" variant="light" expand="lg">
+//         <Container>
+//           <Link to="/" className="navbar-brand">
+//             TINY
+//           </Link>
+//           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//           <Navbar.Collapse id="basic-navbar-nav">
+//             <Nav className="me-auto">
+//               <Link to="/" className="nav-link">
+//                 Home
+//               </Link>
+//               <Link to="/login" className="nav-link">
+//                 Login
+//               </Link>
+//               <Link to="/signup" className="nav-link">
+//                 Sign Up
+//               </Link>
+//             </Nav>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//     </div>
+//   );
+// }
+
+// export default Header;

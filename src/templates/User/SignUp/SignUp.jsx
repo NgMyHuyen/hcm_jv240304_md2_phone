@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../../organism/Header/Header";
-
+import Header from "../../../organism/Header/Header";
+import "./signUp.scss";
 export default function SignUp() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
