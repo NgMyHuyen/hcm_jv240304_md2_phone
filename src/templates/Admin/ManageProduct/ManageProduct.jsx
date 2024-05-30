@@ -2,17 +2,36 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./style.scss";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addProduct,
+  deleteProduct,
+  fetchProducts,
+} from "../../../store/Slices/productSlice";
 
 export default function ManageProduct() {
+  const dispatch = useDispatch();
+
   const [productList, setProductList] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/productList");
-      setProductList(response.data);
+      try {
+        const response = await axios.get("http://localhost:3000/productList");
+        setProductList(response.data);
+      } catch (error) {
+        console.error(error);
+      }
     };
+
     fetchData();
   }, []);
-  console.log(productList);
+
+  const handleDeleteProduct = (id) => {
+    dispatch(deleteProduct(id));
+    setProductList(productList.filter((product) => product.id !== id));
+  };
+
   return (
     <>
       <div className="adminUser-right">
@@ -97,7 +116,11 @@ export default function ManageProduct() {
                     <Button variant="contained" color="success">
                       Edit
                     </Button>
-                    <Button variant="outlined" color="error">
+                    <Button
+                      variant="outlined"
+                      color="error"
+                      onClick={() => handleDeleteProduct(product.id)}
+                    >
                       Deltele
                     </Button>
                   </span>

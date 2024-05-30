@@ -13,14 +13,14 @@ import CartDetail from "./templates/Cart/CartDetail.jsx";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products-detail" element={<ProductsDetail />}></Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+    <Router>
+      {/* <Header /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products-detail" element={<ProductsDetail />}></Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        {/* adminLogin -> sua lai: admin-login */}
 
           <Route path="/adminweb" element={<AdminWeb />}>
             <Route path="user" element={<ManageUser />}></Route>

@@ -70,6 +70,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import { useDispatch } from "react-redux";
+// import { authActions } from "../../store/Slices/userSlice";
 
 function Header() {
   const cartItems = useSelector((state) => state.cart.items);
