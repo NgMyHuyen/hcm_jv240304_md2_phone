@@ -5,24 +5,15 @@
       "category": "iphone",
       "img": "https://static.chotot.com/storage/chotot-kinhnghiem/c2c/2023/04/c19d91bc-oppo-moi-ra-mat-2023-500x388.png",
       "phoneName": "Galaxy S24 Ultra",
+
       "phonePrice": 37490000,
-      "quantity": 20,
       "phoneText1": "Phan cung manh me",
       "phoneText2": "Lam tu Titan."
     },
     {
-      "id": 2,
+      "id": "3",
       "category": "samsung",
       "img": "https://images.samsung.com/is/image/samsung/assets/vn/smartphones/a55/pcd/Galaxy_A55_PCD_MD_Large_PC.png?$376_376_PNG$",
-      "phoneName": "Galaxy S24 Ultra",
-      "phonePrice": 37490000,
-      "phoneText1": "Phan cung manh me",
-      "phoneText2": "Lam tu Titan."
-    },
-    {
-      "id": 3,
-      "category": "samsung",
-      "img": "https://images.samsung.com/is/image/samsung/assets/vn/2401/pcd/smp/PCD_E1E2_Online_Whats-new_330x330_pc.jpg?$330_330_JPG$",
       "phoneName": "Galaxy S24 Ultra",
       "phonePrice": 37490000,
       "phoneText1": "Phan cung manh me",
@@ -42,7 +33,8 @@
       "userName": "Tran",
       "gender": "Nu",
       "email": "nguyenhasbkjas",
-      "phone": "0987654321"
+      "phone": "0987654321",
+      "password": "12345"
     }
   ],
   "items": [
