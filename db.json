@@ -3,7 +3,7 @@
     {
       "id": 1,
       "category": "iphone",
-      "img": "https://cdn.tgdd.vn/Products/Images/42/220522/iphone-13-pro-max-xanh-duong-600x600-600x600.jpg",
+      "img": "https://static.chotot.com/storage/chotot-kinhnghiem/c2c/2023/04/c19d91bc-oppo-moi-ra-mat-2023-500x388.png",
       "phoneName": "Galaxy S24 Ultra",
       "phonePrice": 37490000,
       "quantity": 20,
@@ -31,18 +31,41 @@
   ],
   "userList": [
     {
-      "id": 1,
+      "id": "1",
       "userName": "Huyen",
       "gender": "Nu",
       "email": "nguyenhasbkjas",
       "phone": "0987654321"
     },
     {
-      "id": 2,
+      "id": "2",
       "userName": "Tran",
       "gender": "Nu",
       "email": "nguyenhasbkjas",
       "phone": "0987654321"
+    }
+  ],
+  "items": [
+    {
+      "id": "1",
+      "title": "iPhone 14 Pro",
+      "text": "The iPhone 14 Pro is the first iPhones to have a new type of display cutout called 'Dynamic Island'",
+      "image": "https://clickbuy.com.vn/uploads/images/2020/10/thumb_IP12Pro_3.jpg",
+      "link": "#"
+    },
+    {
+      "id": "2",
+      "title": "Galaxy Z Fold3",
+      "text": "Unfold Z Fold3 theater-like viewing experiences, fully engaged in content on the uninterrupted 7.6-inch",
+      "image": "https://chungblackberry.com/wp-content/uploads/2024/03/samsung-galaxy-z-fold4-kem-256gb-600x600-1.jpg",
+      "link": "#"
+    },
+    {
+      "id": "3",
+      "title": "AirPods Max",
+      "text": "Feature incredible high-fidelity audio, Adaptive EQ, Active Noise Cancellation, and spatial audio",
+      "image": "https://haidangmobile.vn/wp-content/uploads/2022/06/bluetooth-airpods-max-apple-xanh-1.jpeg",
+      "link": "#"
     }
   ]
 }
