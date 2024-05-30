@@ -1,19 +1,9 @@
 {
   "productList": [
     {
-      "id": 1,
+      "id": "1",
       "category": "iphone",
       "img": "https://static.chotot.com/storage/chotot-kinhnghiem/c2c/2023/04/c19d91bc-oppo-moi-ra-mat-2023-500x388.png",
-      "phoneName": "Galaxy S24 Ultra",
-
-      "phonePrice": 37490000,
-      "phoneText1": "Phan cung manh me",
-      "phoneText2": "Lam tu Titan."
-    },
-    {
-      "id": "3",
-      "category": "samsung",
-      "img": "https://images.samsung.com/is/image/samsung/assets/vn/smartphones/a55/pcd/Galaxy_A55_PCD_MD_Large_PC.png?$376_376_PNG$",
       "phoneName": "Galaxy S24 Ultra",
       "phonePrice": 37490000,
       "phoneText1": "Phan cung manh me",
@@ -35,16 +25,22 @@
       "email": "nguyenhasbkjas",
       "phone": "0987654321",
       "password": "12345"
+    },
+    {
+      "id": "dab3",
+      "username": "ng@gmail.com",
+      "email": "ng@gmail.com",
+      "password": "ng@gmail.com",
+      "confirmPassword": "ng@gmail.com",
+      "acceptTerms": true
+    },
+    {
+      "id": "4ad1",
+      "username": "ng@gmail.com",
+      "password": "ng@gmail.com"
     }
   ],
   "items": [
-    {
-      "id": "1",
-      "title": "iPhone 14 Pro",
-      "text": "The iPhone 14 Pro is the first iPhones to have a new type of display cutout called 'Dynamic Island'",
-      "image": "https://clickbuy.com.vn/uploads/images/2020/10/thumb_IP12Pro_3.jpg",
-      "link": "#"
-    },
     {
       "id": "2",
       "title": "Galaxy Z Fold3",
