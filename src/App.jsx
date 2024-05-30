@@ -13,7 +13,7 @@ import ProductsDetail from "./organism/Detail/ProductsDetail.jsx";
 function App() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products-detail" element={<ProductsDetail />}></Route>

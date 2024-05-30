@@ -1,33 +1,43 @@
-// import React, { useState } from "react";
-// import Header from "../../organism/Header/Header";
-
-// src/components/Login/Login.jsx
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
-import { authActions } from "../../../store/Slices/User.slice.js";
+import axios from "axios";
 import "./login.scss";
+import { login } from "../../../store/Slices/userSlice";
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const errorMessage = useSelector((state) => state.auth.errorMessage);
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const usernameFromState = useSelector((state) => state.auth.username); // Add this line
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLoginSubmit = (event) => {
+  const handleLoginSubmit = async (event) => {
     event.preventDefault();
-    dispatch(authActions.login({ username, password }));
-    if (isAuthenticated) {
-      navigate("/admin");
+    if (username === "admin" && password === "12345") {
+      dispatch(login({ username, password }));
+      navigate("/adminweb");
+    } else {
+      const response = await axios.get(
+        `http://localhost:3000/userList?username=${username}&password=${password}`
+      );
+      if (response.data.length > 0) {
+        const user = response.data[0];
+        if (user.password === password) {
+          dispatch(login({ username, password }));
+          navigate("/");
+        } else {
+          console.error("Incorrect password");
+        }
+      } else {
+        console.error("Account does not exist");
+      }
     }
   };
 
   return (
-    <div className="login-form-container ">
+    <div className="login-form-container">
       <div className="wrapper">
         <h1>Login</h1>
         <form onSubmit={handleLoginSubmit}>
@@ -49,19 +59,22 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {errorMessage && <p className="error">{errorMessage}</p>}
+          {/* {errorMessage && <p className="error">{errorMessage}</p>} */}
 
           <a href="#">Forgot password?</a>
           <div>
             <p>
-              Don't have an account?
-              <Link to={"/signup"}>Register</Link>
+              Don't have an account? <Link to={"/signup"}>Register</Link>
             </p>
           </div>
           <button type="submit" className="login-button">
             Login
           </button>
         </form>
+        <div>
+          <i className="iconUser"></i>
+          <span>{usernameFromState}</span> {/* Add this line */}
+        </div>
       </div>
     </div>
   );

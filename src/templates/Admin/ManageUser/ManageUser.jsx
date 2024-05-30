@@ -1,18 +1,46 @@
 import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+// import { signUp } from "../../../store/Slices/signUpSlice";
 import "./style.scss";
+// import { deleteUser } from "../../../store/Slices/userSlice";
 
 export default function ManageUser() {
+  const dispatch = useDispatch();
   const [userList, setUserList] = useState([]);
+
   useEffect(() => {
-    const fectchData = async () => {
-      const response = await axios.get("http://localhost:3000/userList");
-      setUserList(response.data);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/userList");
+        setUserList(response.data);
+      } catch (error) {
+        console.log(error);
+      }
     };
-    fectchData();
+    fetchData();
   }, []);
 
+  // const handleDeleteUser = (id) => async () => {
+  //   try {
+  //     await dispatch(deleteUser(id));
+  //     setUserList(userList.filter((user) => user.userID !== id));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  console.log(userList);
+
+  const handleDeleteUser = async (id) => {
+    console.log(id);
+    try {
+      await axios.delete(`http://localhost:3000/userList/${id}`);
+      setUserList(userList.filter((user) => user.userID !== id));
+    } catch (error) {
+      console.error("Error deleting user", error);
+    }
+  };
   return (
     <>
       <div className="adminUser-right">
@@ -27,30 +55,35 @@ export default function ManageUser() {
             <th>Phone</th>
             <th>Action</th>
           </tr>
-
-          {userList?.map((e) => (
-            <tbody key={e.userID}>
-              <tr>
+          <tbody>
+            {userList?.map((user) => (
+              <tr key={user.userID}>
                 <td>
                   <input type="checkbox" />
                 </td>
-                <td>{e.userName}</td>
-                <td>{e.gender}</td>
-                <td>{e.email}</td>
-                <td>{e.phone}</td>
+                <td>{user.userName}</td>
+                <td>{user.gender}</td>
+                <td>{user.email}</td>
+                <td>{user.phone}</td>
                 <td id="td-btn">
                   <span>
                     <Button variant="contained" color="success">
                       Edit
                     </Button>
-                    <Button variant="outlined" color="error">
+                    <Button
+                      variant="outlined"
+                      color="error"
+                      onClick={() => {
+                        handleDeleteUser(user.userID);
+                      }}
+                    >
                       Deltele
                     </Button>
                   </span>
                 </td>
               </tr>
-            </tbody>
-          ))}
+            ))}
+          </tbody>
         </table>
       </div>
     </>
