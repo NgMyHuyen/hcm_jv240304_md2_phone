@@ -6,8 +6,18 @@ import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import { useDispatch } from "react-redux";
+// import { authActions } from "../../store/Slices/userSlice";
 
 function Header() {
+  const dispatch = useDispatch();
+  // const handleLogout = () => {
+  //   dispatch(authActions.logout());
+  // };
+  const handleLogout = () => {
+    console.log("AAA");
+  };
+
   return (
     <>
       <div className="header">
@@ -41,15 +51,15 @@ function Header() {
                 align="end"
               >
                 <NavDropdown.Item>
-                  <Link to={"/admin-login"}>Admin</Link>
+                  <Link to={"/login"}>Login</Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item>
-                  <Link to={"/login"}>User</Link>
+                  <Link to={"/signup"}>Sign Up</Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <ShoppingCartIcon />
-              <LogoutIcon />
+              <LogoutIcon onClick={handleLogout} />
             </div>
           </Container>
         </Navbar>
