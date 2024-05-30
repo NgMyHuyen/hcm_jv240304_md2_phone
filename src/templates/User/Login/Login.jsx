@@ -24,12 +24,8 @@ const Login = () => {
       );
       if (response.data.length > 0) {
         const user = response.data[0];
-        if (user.password === password) {
-          dispatch(login({ username, password }));
-          navigate("/");
-        } else {
-          console.error("Incorrect password");
-        }
+        console.log("da vao day", user);
+        navigate("/");
       } else {
         console.error("Account does not exist");
       }
