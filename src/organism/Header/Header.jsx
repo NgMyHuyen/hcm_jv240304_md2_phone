@@ -7,15 +7,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import { useDispatch } from "react-redux";
-// import { authActions } from "../../store/Slices/userSlice";
+import { logout } from "../../redux/auth/authSlice";
 
 function Header() {
   const dispatch = useDispatch();
   // const handleLogout = () => {
   //   dispatch(authActions.logout());
   // };
+  const loginStatus = useSelector((state) => state.auth.status); // adjust this selector according to your state structure
+  const userLogin = useSelector((state) => state.auth.user);
+
   const handleLogout = () => {
-    console.log("AAA");
+    dispatch(logout());
   };
 
   return (
@@ -51,7 +54,10 @@ function Header() {
                 align="end"
               >
                 <NavDropdown.Item>
-                  <Link to={"/login"}>Login</Link>
+                  <span>
+                    {userLogin ? userLogin.name : "Guest"}
+                    <Link to={"/login"}>Login</Link>
+                  </span>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item>
@@ -59,7 +65,10 @@ function Header() {
                 </NavDropdown.Item>
               </NavDropdown>
               <ShoppingCartIcon />
-              <LogoutIcon onClick={handleLogout} />
+              {loginStatus === "succeeded" && (
+                <LogoutIcon onClick={handleLogout} />
+              )}
+              {/* <LogoutIcon onClick={handleLogout} /> */}
             </div>
           </Container>
         </Navbar>

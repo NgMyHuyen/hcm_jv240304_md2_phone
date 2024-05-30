@@ -22,14 +22,6 @@ export default function ManageUser() {
     fetchData();
   }, []);
 
-  // const handleDeleteUser = (id) => async () => {
-  //   try {
-  //     await dispatch(deleteUser(id));
-  //     setUserList(userList.filter((user) => user.userID !== id));
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   console.log(userList);
 
   const handleDeleteUser = async (id) => {
@@ -41,6 +33,7 @@ export default function ManageUser() {
       console.error("Error deleting user", error);
     }
   };
+
   return (
     <>
       <div className="adminUser-right">

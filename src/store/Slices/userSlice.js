@@ -20,23 +20,24 @@ const initialState = {
 const authSlice = createSlice({
   name: "auth/authSlice",
   initialState: initialState.auth,
+
   reducers: {
     login(state, action) {
       const { username, password } = action.payload;
       if (username === "admin" && password === "12345") {
         state.isAuthenticated = true;
         state.errorMessage = "";
-        state.role = "admin"; // Add this line
+        state.role = "admin";
       } else {
         state.isAuthenticated = false;
         state.errorMessage = "Invalid username or password";
-        state.role = "user"; // Add this line
+        state.role = "user";
       }
     },
     logout(state) {
       state.isAuthenticated = false;
       state.errorMessage = "";
-      state.role = ""; // Add this line
+      state.role = "";
     },
   },
 });

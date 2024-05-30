@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./templates/User/Login/Login";
 import Home from "./templates/User/Home";
-import Header from "./organism/Header/Header";
 import SignUp from "./templates/User/SignUp/SignUp";
 import "./App.scss";
 import AdminWeb from "./templates/Admin/AdminWeb/AdminWeb";
@@ -13,7 +12,6 @@ import ProductsDetail from "./organism/Detail/ProductsDetail.jsx";
 function App() {
   return (
     <Router>
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products-detail" element={<ProductsDetail />}></Route>
