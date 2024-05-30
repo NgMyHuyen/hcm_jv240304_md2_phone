@@ -1,18 +1,9 @@
 {
   "productList": [
     {
-      "id": "2",
-      "category": "samsung",
-      "img": "https://img.lazcdn.com/g/p/847689d39d4b52d1deb81db01f56af68.jpg_720x720q80.jpg",
-      "phoneName": "Z Flip 5",
-      "phonePrice": 37490000,
-      "phoneText1": "Phan cung manh me",
-      "phoneText2": "Lam tu Titan."
-    },
-    {
-      "id": "3",
-      "category": "samsung",
-      "img": "https://images.samsung.com/is/image/samsung/assets/vn/smartphones/a55/pcd/Galaxy_A55_PCD_MD_Large_PC.png?$376_376_PNG$",
+      "id": "1",
+      "category": "iphone",
+      "img": "https://static.chotot.com/storage/chotot-kinhnghiem/c2c/2023/04/c19d91bc-oppo-moi-ra-mat-2023-500x388.png",
       "phoneName": "Galaxy S24 Ultra",
       "phonePrice": 37490000,
       "phoneText1": "Phan cung manh me",
@@ -21,8 +12,48 @@
   ],
   "userList": [
     {
-      "userName": "admin",
+      "id": "1",
+      "userName": "Huyen",
+      "gender": "Nu",
+      "email": "nguyenhasbkjas",
+      "phone": "0987654321"
+    },
+    {
+      "id": "2",
+      "userName": "Tran",
+      "gender": "Nu",
+      "email": "nguyenhasbkjas",
+      "phone": "0987654321",
       "password": "12345"
+    },
+    {
+      "id": "dab3",
+      "username": "ng@gmail.com",
+      "email": "ng@gmail.com",
+      "password": "ng@gmail.com",
+      "confirmPassword": "ng@gmail.com",
+      "acceptTerms": true
+    },
+    {
+      "id": "4ad1",
+      "username": "ng@gmail.com",
+      "password": "ng@gmail.com"
+    }
+  ],
+  "items": [
+    {
+      "id": "2",
+      "title": "Galaxy Z Fold3",
+      "text": "Unfold Z Fold3 theater-like viewing experiences, fully engaged in content on the uninterrupted 7.6-inch",
+      "image": "https://chungblackberry.com/wp-content/uploads/2024/03/samsung-galaxy-z-fold4-kem-256gb-600x600-1.jpg",
+      "link": "#"
+    },
+    {
+      "id": "3",
+      "title": "AirPods Max",
+      "text": "Feature incredible high-fidelity audio, Adaptive EQ, Active Noise Cancellation, and spatial audio",
+      "image": "https://haidangmobile.vn/wp-content/uploads/2022/06/bluetooth-airpods-max-apple-xanh-1.jpeg",
+      "link": "#"
     }
   ]
 }
