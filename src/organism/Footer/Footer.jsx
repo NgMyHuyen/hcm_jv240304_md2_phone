@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.scss";
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <div
@@ -19,7 +21,9 @@ export default function Footer() {
         <p>Vision</p>
       </div>
       <div className="second-column">
-        <h5> Contact Us</h5>
+        <Link to={"/contactForm"}>
+          <h5> Contact Us</h5>
+        </Link>
         <p>Indore</p>
         <p>Mumbai</p>
         <p>Dehli</p>

@@ -30,7 +30,7 @@ export default function ManageUser() {
       await axios.delete(`http://localhost:3000/userList/${id}`);
       setUserList(userList.filter((user) => user.userID !== id));
     } catch (error) {
-      console.error("Error deleting user", error);
+      console.log("Error deleting user", error);
     }
   };
 

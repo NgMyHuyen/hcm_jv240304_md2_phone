@@ -9,6 +9,11 @@ import ManageUser from "./templates/Admin/ManageUser/ManageUser.jsx";
 import ManageProduct from "./templates/Admin/ManageProduct/ManageProduct.jsx";
 import ProductsDetail from "./organism/Detail/ProductsDetail.jsx";
 import CartDetail from "./templates/Cart/CartDetail.jsx";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import OrderManagement from "./display/OrderManage.jsx";
+import ContactForm from "./display/ContactForm.jsx";
+import History from "./display/History.jsx";
 
 function App() {
   return (
@@ -25,9 +30,12 @@ function App() {
           <Route path="/adminweb" element={<AdminWeb />}>
             <Route path="user" element={<ManageUser />}></Route>
             <Route path="product" element={<ManageProduct />}></Route>
+            <Route path="order" element={<OrderManagement />}></Route>
           </Route>
 
           <Route path="/cart-detail" element={<CartDetail />}></Route>
+          <Route path="/contactForm" element={<ContactForm />}></Route>
+          <Route path="/history" element={<History />}></Route>
         </Routes>
       </Router>
     </>

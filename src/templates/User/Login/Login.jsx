@@ -9,7 +9,8 @@ import { login } from "../../../store/Slices/userSlice";
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const usernameFromState = useSelector((state) => state.auth.username); // Add this line
+  // const usernameFromState = useSelector((state) => state.auth.username);
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,12 +23,13 @@ const Login = () => {
       const response = await axios.get(
         `http://localhost:3000/userList?username=${username}&password=${password}`
       );
+      console.log(response.data, "response");
       if (response.data.length > 0) {
         const user = response.data[0];
         console.log("da vao day", user);
         navigate("/");
       } else {
-        console.error("Account does not exist");
+        console.log("Account does not exist");
       }
     }
   };
@@ -55,7 +57,6 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {/* {errorMessage && <p className="error">{errorMessage}</p>} */}
 
           <a href="#">Forgot password?</a>
           <div>
@@ -69,7 +70,6 @@ const Login = () => {
         </form>
         <div>
           <i className="iconUser"></i>
-          <span>{usernameFromState}</span> {/* Add this line */}
         </div>
       </div>
     </div>

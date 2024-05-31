@@ -15,22 +15,9 @@ export default function AdminWeb() {
             <Link to={"/adminweb"}>ADMIN WEB</Link>
             <Link to={"user"}>Manage User</Link>
             <Link to={"product"}>Manage Product</Link>
-            <p>
-              <span>
-                <Button variant="contained" color="success">
-                  Add
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="error"
-                  onClick={() => {
-                    handleDeleteUser(user.userID);
-                  }}
-                >
-                  Deltele
-                </Button>
-              </span>
-            </p>
+            <Link to={"order"} className="active">
+              Order Manage
+            </Link>
           </div>
         </div>
 
