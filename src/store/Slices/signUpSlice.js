@@ -26,6 +26,7 @@ const signUpSlice = createSlice({
   name: "user",
   initialState,
   reducers: {},
+
   extraReducers: (builder) => {
     builder.addCase(signUp.fulfilled, (state, action) => {
       state.status = "succeeded";

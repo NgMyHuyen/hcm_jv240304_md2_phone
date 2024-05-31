@@ -166,7 +166,7 @@ export default function Detail() {
               <div className="div-img-text-detail" key={product.id}>
                 <img className="img-detail" src={product.img} alt="product" />
                 <div className="div-text-detail">
-                  <h5>{product.phoneName}</h5>
+                  <h5>{product.productName}</h5>
                   <div className="price-btnBuy">
                     <h6>{product.phonePrice}</h6>
                     <button

@@ -1,10 +1,19 @@
 {
   "productList": [
     {
-      "id": "1",
-      "category": "iphone",
-      "img": "https://static.chotot.com/storage/chotot-kinhnghiem/c2c/2023/04/c19d91bc-oppo-moi-ra-mat-2023-500x388.png",
-      "phoneName": "Galaxy S24 Ultra",
+      "id": 2,
+      "category": "samsung",
+      "img": "https://images.samsung.com/is/image/samsung/assets/vn/smartphones/a55/pcd/Galaxy_A55_PCD_MD_Large_PC.png?$376_376_PNG$",
+      "productName": "Galaxy S24 Ultra",
+      "phonePrice": 37490000,
+      "phoneText1": "Phan cung manh me",
+      "phoneText2": "Lam tu Titan."
+    },
+    {
+      "id": 3,
+      "category": "samsung",
+      "img": "https://images.samsung.com/is/image/samsung/assets/vn/2401/pcd/smp/PCD_E1E2_Online_Whats-new_330x330_pc.jpg?$330_330_JPG$",
+      "productName": "Galaxy S24 Ultra",
       "phonePrice": 37490000,
       "phoneText1": "Phan cung manh me",
       "phoneText2": "Lam tu Titan."
@@ -12,32 +21,21 @@
   ],
   "userList": [
     {
-      "id": "1",
-      "userName": "Huyen",
-      "gender": "Nu",
-      "email": "nguyenhasbkjas",
-      "phone": "0987654321"
-    },
-    {
-      "id": "2",
-      "userName": "Tran",
-      "gender": "Nu",
-      "email": "nguyenhasbkjas",
-      "phone": "0987654321",
-      "password": "12345"
-    },
-    {
       "id": "dab3",
-      "username": "ng@gmail.com",
+      "userName": "ng@gmail.com",
       "email": "ng@gmail.com",
       "password": "ng@gmail.com",
       "confirmPassword": "ng@gmail.com",
       "acceptTerms": true
     },
+
     {
-      "id": "4ad1",
-      "username": "ng@gmail.com",
-      "password": "ng@gmail.com"
+      "id": "54e6",
+      "username": "tramhuong",
+      "email": "LuuTram@gmail.com",
+      "password": "tramhuong",
+      "confirmPassword": "tramhuong",
+      "acceptTerms": true
     }
   ],
   "items": [

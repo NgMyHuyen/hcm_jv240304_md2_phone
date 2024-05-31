@@ -4,15 +4,20 @@ import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  updateProduct,
   addProduct,
   deleteProduct,
   fetchProducts,
 } from "../../../store/Slices/productSlice";
+import { set } from "react-hook-form";
 
 export default function ManageProduct() {
   const dispatch = useDispatch();
 
-  const [productList, setProductList] = useState([]);
+  const imgRef = React.useRef();
+  const productNameRef = React.useRef();
+  const priceRef = React.useRef();
+  const quantityRef = React.useRef();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,13 +28,57 @@ export default function ManageProduct() {
         console.error(error);
       }
     };
-
     fetchData();
   }, []);
+
+  const [productList, setProductList] = useState([]);
+  const handleAddProduct = () => {
+    const newProduct = {
+      img: imgRef.current.value,
+      productName: productNameRef.current.value,
+      price: priceRef.current.value,
+      quantity: quantityRef.current.value,
+    };
+    dispatch(addProduct(newProduct));
+    imgRef.current.value = "";
+    productNameRef.current.value = "";
+    priceRef.current.value = "";
+    quantityRef.current.value = "";
+    setProductList([...productList, newProduct]);
+  };
 
   const handleDeleteProduct = (id) => {
     dispatch(deleteProduct(id));
     setProductList(productList.filter((product) => product.id !== id));
+  };
+
+  const [editingProduct, setEditingProduct] = useState(null);
+  const handleEditProduct = (product) => {
+    // Set the product to be edited
+    setEditingProduct(product);
+    // Fill the form with the product data
+    imgRef.current.value = product.img;
+    productNameRef.current.value = product.productName;
+    priceRef.current.value = product.price;
+    quantityRef.current.value = product.quantity;
+  };
+  const handleUpdateProduct = () => {
+    // Create a product object
+    const updatedProduct = {
+      ...editingProduct,
+      img: imgRef.current.value,
+      productName: productNameRef.current.value,
+      price: priceRef.current.value,
+      quantity: quantityRef.current.value,
+    };
+    dispatch(updateProduct(updatedProduct));
+    // Clear the form and the editing product
+    imgRef.current.value = "";
+    productNameRef.current.value = "";
+    priceRef.current.value = "";
+    quantityRef.current.value = "";
+    setEditingProduct(null);
+    setProductList([...productList, updatedProduct]);
   };
 
   return (
@@ -47,6 +96,7 @@ export default function ManageProduct() {
                 name="img"
                 className="input"
                 placeholder="Link image"
+                ref={imgRef}
               />
             </div>
             <div className="input-product-infor">
@@ -56,6 +106,7 @@ export default function ManageProduct() {
                 name="productName"
                 className="input"
                 placeholder="Name's product"
+                ref={productNameRef}
               />
             </div>
             <div className="input-product-infor">
@@ -65,6 +116,7 @@ export default function ManageProduct() {
                 name="price"
                 className="input"
                 placeholder="Price"
+                ref={priceRef}
               />
             </div>
 
@@ -75,9 +127,10 @@ export default function ManageProduct() {
                 name="quantity"
                 className="input"
                 placeholder="Quantity"
+                ref={quantityRef}
               />
             </div>
-            <button type="button" id="add" onclick="addProducts()">
+            <button type="button" id="add" onClick={handleAddProduct}>
               Add
             </button>
 
@@ -85,7 +138,7 @@ export default function ManageProduct() {
               id="save"
               style={{ display: "none" }}
               type="button"
-              onclick="saveProduct()"
+              onClick="saveProduct()"
             >
               <p>Lưu lại</p>
             </button>
@@ -108,12 +161,18 @@ export default function ManageProduct() {
                 <td>
                   <img src={product.img} alt={product.phoneName} />
                 </td>
-                <td>{product.phoneName}</td>
+                <td>{product.productName}</td>
                 <td>{product.price}</td>
                 <td>{product.quantity}</td>
                 <td id="td-btn">
                   <span>
-                    <Button variant="contained" color="success">
+                    <Button
+                      variant="contained"
+                      color="success"
+                      onClick={() => {
+                        handleEditProduct(product);
+                      }}
+                    >
                       Edit
                     </Button>
                     <Button

@@ -1,42 +1,41 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// export const deleteUser = createAsyncThunk("user/deleteUser", async (id) => {
-//   await axios.delete(`http://localhost:3000/userList/${id}`);
-//   return id;
-// });
-
-// Initial state
 const initialState = {
   users: [],
   auth: {
+    name: "",
     isAuthenticated: false,
-    errorMessage: "",
-    role: "", // Add this line
+    role: "",
   },
 };
+export const fetchUser = createAsyncThunk("auth/fetchUser", async () => {
+  const response = await axios.get(" http://localhost:3000/userList");
+  return response.data;
+});
 
 // Auth slice
 const authSlice = createSlice({
   name: "auth/authSlice",
   initialState: initialState.auth,
+
   reducers: {
     login(state, action) {
-      const { username, password } = action.payload;
-      if (username === "admin" && password === "12345") {
+      const { userName, password } = action.payload;
+      if (userName === "admin" && password === "12345") {
         state.isAuthenticated = true;
-        state.errorMessage = "";
-        state.role = "admin"; // Add this line
+        state.name = userName;
+        state.role = "admin";
       } else {
         state.isAuthenticated = false;
-        state.errorMessage = "Invalid username or password";
-        state.role = "user"; // Add this line
+        state.name = userName;
+        state.role = "user";
       }
     },
     logout(state) {
       state.isAuthenticated = false;
       state.errorMessage = "";
-      state.role = ""; // Add this line
+      state.role = "";
     },
   },
 });
